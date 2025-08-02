@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TempBin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temporary Text Bin</h1>
+        <textarea id="contentText" placeholder="Paste your text here..."></textarea>
+        <div class="options">
+            <label for="expiresIn">Expires in:</label>
+            <input type="text" id="expiresIn" value="10m" placeholder="e.g., 5m, 1h, 1d">
+        </div>
+        <button id="saveButton">Save Snippet</button>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
