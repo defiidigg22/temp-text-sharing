@@ -14,7 +14,7 @@ saveButton.addEventListener('click', async () => {
 
     try {
         // Send the data to your FastAPI backend using the fetch API
-        const response = await fetch('http://127.0.0.1:8000/create', {
+        const response = await fetch('/create', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ saveButton.addEventListener('click', async () => {
         const result = await response.json();
         
         // Display the successful result
-        const snippetUrl = `http://127.0.0.1:8000${result.url}`;
+        const snippetUrl = result.url;
         resultDiv.innerHTML = `Success! Your link is: <a href="${snippetUrl}" target="_blank">${snippetUrl}</a>`;
 
     } catch (error) {
